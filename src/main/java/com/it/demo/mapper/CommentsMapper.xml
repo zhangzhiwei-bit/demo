@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.it.demo.mapper.CommentsMapper">
+    <insert id="addComment" parameterType="com.it.demo.model.Comments">
+        insert into comments(username,userurl,imageurls,time,content,position) values(#{username},#{userurl},#{imageurls},#{time},#{content},#{position})
+    </insert>
+    <select id="getAllComments" resultType="com.it.demo.model.Comments">
+        select * from comments order by no desc;
+    </select>
+</mapper>
