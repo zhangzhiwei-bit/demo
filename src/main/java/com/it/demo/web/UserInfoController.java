@@ -25,8 +25,8 @@ public class UserInfoController {
     @ResponseBody
     public Object getUserInfo(HttpServletRequest request){
         String code=request.getParameter("code");
-        String appid="wxb5ce73ff5e3739a3";
-        String secret="7db4076da6c99e28e8ef44730c9828ac";
+        String appid="自己的appid";
+        String secret="自己从微信公众平台获取的secret key";
         String url="https://api.weixin.qq.com/sns/jscode2session?appid="+appid+"&secret="+secret+"&js_code=" + code+"&grant_type=authorization_code";
         ResponseEntity <String> responseEntity=restTemplate.getForEntity(url, String.class);
         // System.out.println(responseEntity.getBody());

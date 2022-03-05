@@ -74,18 +74,5 @@ public class UserController {
     public Object getAllcomments() {
         List<Comments> comments= commentService.getAllComments();
         return comments;
-    }
-
-    // @RequestMapping("/wxUserInfo")
-    // @ResponseBody
-    // public Object getUserInfo(HttpServletRequest request){
-    //     String code=request.getParameter("code");
-    //     String appid="wxb5ce73ff5e3739a3";
-    //     String secret="7db4076da6c99e28e8ef44730c9828ac";
-    //     String url="https://api.weixin.qq.com/sns/jscode2session?appid="+appid+"&secret="+secret+"&js_code=" + code+"&grant_type=authorization_code";
-    //     ResponseEntity <String> responseEntity=restTemplate.getForEntity(url, String.class);
-    //     System.out.println(responseEntity.getBody());
-    //     return responseEntity.getBody();
-    // }
-    
+    }    
 }
